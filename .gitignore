@@ -1,0 +1,8 @@
+.idea/
+target
+*.iml
+spark_ui_events
+derby.log
+metastore_db/
+
+spark-warehouse/
