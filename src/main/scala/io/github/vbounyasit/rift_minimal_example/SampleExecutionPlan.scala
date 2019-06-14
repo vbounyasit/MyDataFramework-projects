@@ -10,9 +10,12 @@ class SampleExecutionPlan(implicit spark: SparkSession) extends ExecutionPlan {
   override val executionPipelines: SampleExecutionPipelines = new SampleExecutionPipelines
 
   import executionPipelines._
-  import executionPipelines.transformers._
 
   override def getExecutionPlan(getSource: String => EitherRP): EitherRP = {
-    getSource("source1") ==> pipeline1 ==> DropDuplicates("col1")
+    val source1Pipeline = getSource("source1") ==> table1Pipeline1 ==> table1Pipeline2
+    val source2Pipeline = getSource("source2") ==> table2Pipeline ==> table2AggregationPipeline
+
+    val result = source1Pipeline.join(source2Pipeline, new SampleJoiner)
+    result ==> postJoinPipeline
   }
 }

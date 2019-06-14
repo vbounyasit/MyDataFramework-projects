@@ -8,17 +8,28 @@
     <artifactId>Rift-ETL-projects</artifactId>
     <version>1.0</version>
 
-    <properties>
-        <scala.version>2.11</scala.version>
-        <spark.version>2.2.1</spark.version>
-    </properties>
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <plugins>
+            <!-- Scala compile config -->
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.4.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>2.11.12</version>
-        </dependency>
         <dependency>
             <groupId>io.github.vbounyasit</groupId>
             <artifactId>rift-etl</artifactId>

@@ -6,7 +6,7 @@ import com.vbounyasit.bigdata.testing.common.HiveEnvironment
 import com.vbounyasit.bigdata.testing.formats.DataFrameIO.DataFrameWriter
 import com.vbounyasit.bigdata.testing.formats.json.{JsonDfLoader, JsonDfWriter}
 
-class SampleTestGenerator extends JobsTestGenerator{
+class SampleTestGenerator extends JobsTestGenerator {
 
   override val sparkApplication: SparkApplication[_, _] = SampleApplication
 

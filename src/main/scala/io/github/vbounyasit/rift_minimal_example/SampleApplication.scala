@@ -11,15 +11,14 @@ object SampleApplication extends SparkApplication {
 
   override def executionPlans(implicit spark: SparkSession): Map[String, ExecutionParameters[_, _]] = Map(
     "job1" -> ExecutionParameters(
-      new SampleExecutionPlan()
+      new SampleExecutionPlan
     )
   )
 
-  override def load(dataFrame: DataFrame, database: String, table: String, optionalJobParameters: OptionalJobParameters[Nothing, Nothing]): Unit =
+  override def load(dataFrame: DataFrame,
+                    database: String,
+                    table: String,
+                    optionalJobParameters: OptionalJobParameters[Nothing, Nothing]): Unit = {
     dataFrame.show()
-
-  def main(args: Array[String]): Unit = {
-    val executionData = loadExecutionData(args)
-    runETL(executionData)
   }
 }
