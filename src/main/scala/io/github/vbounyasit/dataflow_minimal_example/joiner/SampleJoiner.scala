@@ -1,4 +1,4 @@
-package io.github.vbounyasit.rift_minimal_example.joiner
+package io.github.vbounyasit.dataflow_minimal_example.joiner
 
 import com.vbounyasit.bigdata.transform.joiner.Joiner
 import com.vbounyasit.bigdata.transform.joiner.JoinerKeys.{CommonKey, JoinKey}

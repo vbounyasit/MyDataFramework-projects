@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example.sample
+package io.github.vbounyasit.dataflow_example.sample
 
 import com.vbounyasit.bigdata.ETL.{ExecutionParameters, OptionalJobParameters}
 import com.vbounyasit.bigdata.SparkApplication
@@ -25,7 +25,8 @@ import com.vbounyasit.bigdata.SparkApplication.ArgumentData
 import com.vbounyasit.bigdata.args.timefilter.TimeFilterArgumentParser
 import com.vbounyasit.bigdata.config.ConfigDefinition
 import com.vbounyasit.bigdata.implicits._
-import io.github.vbounyasit.rift_example.sample.data.{SampleApplicationConf, SampleArgument}
+import io.github.vbounyasit.dataflow_example.sample.data.{SampleApplicationConf, SampleArgument}
+import io.github.vbounyasit.dataflow_example.sample.data.SampleArgument
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object SampleApplication extends SparkApplication[SampleApplicationConf, SampleArgument] {

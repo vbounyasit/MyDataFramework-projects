@@ -17,6 +17,19 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example.sample.data
+package io.github.vbounyasit.dataflow_example.sample.data
 
-case class SampleApplicationConf(param1: String, param2: Int)
+import com.vbounyasit.bigdata.args.timefilter.TimeFilterArgument
+import com.vbounyasit.bigdata.utils.DateUtils
+import com.vbounyasit.bigdata.datePattern
+
+case class SampleArgument(startDate: String, endDate: String) extends TimeFilterArgument[SampleArgument] {
+  override def withStartDate(value: String): SampleArgument = copy(startDate = value)
+
+  override def withEndDate(value: String): SampleArgument = copy(endDate = value)
+}
+
+object SampleArgument {
+  def apply(): SampleArgument =
+    SampleArgument(DateUtils.today(datePattern.pattern), DateUtils.today(datePattern.pattern))
+}

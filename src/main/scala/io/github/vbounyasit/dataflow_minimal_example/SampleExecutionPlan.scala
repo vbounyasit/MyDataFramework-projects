@@ -1,8 +1,9 @@
-package io.github.vbounyasit.rift_minimal_example
+package io.github.vbounyasit.dataflow_minimal_example
 
 import com.vbounyasit.bigdata.EitherRP
 import com.vbounyasit.bigdata.transform.ExecutionPlan
 import com.vbounyasit.bigdata.transform.TransformOps._
+import io.github.vbounyasit.dataflow_minimal_example.joiner.SampleJoiner
 import org.apache.spark.sql.SparkSession
 
 class SampleExecutionPlan(implicit spark: SparkSession) extends ExecutionPlan {

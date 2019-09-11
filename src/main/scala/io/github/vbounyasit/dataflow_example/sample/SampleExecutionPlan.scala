@@ -17,13 +17,14 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example.sample
+package io.github.vbounyasit.dataflow_example.sample
 
 import com.vbounyasit.bigdata.ETL.OptionalJobParameters
 import com.vbounyasit.bigdata.EitherRP
 import com.vbounyasit.bigdata.transform.ExecutionPlan
 import com.vbounyasit.bigdata.transform.TransformOps._
-import io.github.vbounyasit.rift_example.sample.data.{SampleApplicationConf, SampleArgument}
+import io.github.vbounyasit.dataflow_example.sample.data.{SampleApplicationConf, SampleArgument}
+import io.github.vbounyasit.dataflow_example.sample.data.SampleArgument
 import org.apache.spark.sql.SparkSession
 
 case class SampleExecutionPlan(optionalParams: OptionalJobParameters[SampleApplicationConf, SampleArgument])(implicit spark: SparkSession) extends ExecutionPlan {

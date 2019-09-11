@@ -1,4 +1,4 @@
-package io.github.vbounyasit.rift_minimal_example
+package io.github.vbounyasit.dataflow_minimal_example
 
 import com.vbounyasit.bigdata.SparkApplication
 import com.vbounyasit.bigdata.testing.JobsTestGenerator

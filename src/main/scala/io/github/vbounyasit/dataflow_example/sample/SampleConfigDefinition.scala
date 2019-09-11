@@ -17,18 +17,18 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example.sample
+package io.github.vbounyasit.dataflow_example.sample
 
 import com.typesafe.config.{Config, ConfigFactory}
 import com.vbounyasit.bigdata.ApplicationConf
 import com.vbounyasit.bigdata.SparkApplication.ApplicationConfData
 import com.vbounyasit.bigdata.config.ConfigDefinition
 import com.vbounyasit.bigdata.implicits._
-import io.github.vbounyasit.rift_example.sample.data.SampleApplicationConf
+import io.github.vbounyasit.dataflow_example.sample.data.SampleApplicationConf
 
 class SampleConfigDefinition extends ConfigDefinition {
-
   import pureconfig.generic.auto._
+
   override val applicationConf: ApplicationConf[SampleApplicationConf] =
     ApplicationConfData(
       "Application conf",

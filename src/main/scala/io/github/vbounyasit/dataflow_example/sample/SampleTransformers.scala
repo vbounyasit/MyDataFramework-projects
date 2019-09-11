@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example.sample
+package io.github.vbounyasit.dataflow_example.sample
 
 import com.vbounyasit.bigdata.transform.TransformComponents.Transformers
 import com.vbounyasit.bigdata.transform.Transformer

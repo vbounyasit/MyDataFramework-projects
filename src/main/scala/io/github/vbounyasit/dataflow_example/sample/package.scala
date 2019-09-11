@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package io.github.vbounyasit.rift_example
+package io.github.vbounyasit.dataflow_example
 
 import com.vbounyasit.bigdata.DatePattern
 
