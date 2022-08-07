@@ -1,5 +1,5 @@
-# DataFlow-projects
-A Project based on DataFlow, to help users get started with the Framework
-(See [DataFlow Wiki](https://github.com/vbounyasit/DataFlow/wiki))
+# MyDataFramework-projects
+A Project based the Framework I wrote, to help users get started with it
+(See [MyDataFramework Wiki](https://github.com/vbounyasit/MyDataFramework/wiki))
 
 This repository is under construction...
